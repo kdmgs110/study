@@ -1,4 +1,8 @@
-M python:3
+# docker build -t jupyter .
+# docker run --rm -p 8001:8000 jupyter 
+# https://qiita.com/ryo415/items/9384a26c0dec031e646a
+
+FROM python:3
 USER root
 
 RUN apt update && \
