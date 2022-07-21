@@ -1,0 +1,27 @@
+// https://tech.actindi.net/2021/11/12/075440
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.205.2/containers/ruby
+{
+    "name": "rubydata/datascience",
+    "image": "rubydata/datascience-notebook:latest",
+
+    // Set *default* container specific settings.json values on container create.
+    "settings": {},
+
+    // Add the IDs of extensions you want installed when the container is created.
+    "extensions": [
+      "rebornix.Ruby",
+      "ms-python.python",  
+      "ms-python.vscode-pylance",
+      "ms-toolsai.jupyter",
+      "ms-toolsai.jupyter-keymap",
+      "julialang.language",
+      "Ikuyadeu.r"
+
+    ],
+    "mounts": [
+      "type=bind,src=${localWorkspaceFolder}/notebooks,dst=/notebooks"
+    ],
+    "workspaceFolder": "/notebooks",
+    "initializeCommand": "mkdir -p notebooks"
+  }
